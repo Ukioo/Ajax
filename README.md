@@ -1,0 +1,2 @@
+# Ajax
+Ajax初探
