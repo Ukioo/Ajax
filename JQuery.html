@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+        用户名：<input type="text" name="user" id="user"/><span id="span"></span><br />
+		密码：<input type="password"/>
+		
+        <input type="button" value="提交"/>
+<script src="jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+    $('#user').blur(function(){ 
+        $.ajax({
+            url: 'php/get.php',
+            data:{
+                user:$('#user').val()
+            },
+            success: function (data){
+                $('#span').text(data)
+            }
+        });
+    });
+</script>
+</body>
+</html>
